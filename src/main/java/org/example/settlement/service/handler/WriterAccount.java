@@ -46,7 +46,9 @@ public class WriterAccount implements UnaryOperator<AccountDTO> {
                     accountDTO.getCurrencyCode() , accountDTO.getMdmCode(),
                     accountDTO.getPriorityCode(), accountDTO.getRegistryTypeCode());
 
-        Account acc = accPool.get(0).getAccountList().get(0);
+        Account acc=null;
+        if (!accPool.isEmpty() && !accPool.get(0).getAccountList().isEmpty())
+            acc = accPool.get(0).getAccountList().get(0);
         if(acc != null ) {
             //Account acc = accList.get(0);
             TppRefProductRegisterType tppRefProductRegisterType = tppRefProductRegisterTypeRepo.findFirstByValue(accountDTO.getRegistryTypeCode());

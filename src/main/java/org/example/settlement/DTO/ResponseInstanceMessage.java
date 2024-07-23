@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.List;
 @Getter @Setter
 public class ResponseInstanceMessage{
-    private Data date;
+    private Data data;
 
     @Getter @Setter
     static class Data {
@@ -16,9 +16,9 @@ public class ResponseInstanceMessage{
     }
 
     public ResponseInstanceMessage(String instanceId, List<String> registerId, List<String> supplementaryAgreementId){
-        this.date = new Data();
-        this.date.setInstanceId(instanceId);
-        this.date.setRegisterId(registerId);
-        this.date.setSupplementaryAgreementId(supplementaryAgreementId);
+        this.data = new Data();
+        this.data.setInstanceId(instanceId);
+        this.data.setRegisterId(registerId);
+        this.data.setSupplementaryAgreementId(supplementaryAgreementId);
     }
 }

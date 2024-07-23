@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter @Setter
 public class ResponseAccountMessage {
-    private Data date;
+    private Data data;
 
     @Getter @Setter
     static class Data {
@@ -13,7 +13,7 @@ public class ResponseAccountMessage {
     }
 
     public ResponseAccountMessage(String accountId){
-        this.date = new Data();
-        this.date.setAccountId(accountId);
+        this.data = new Data();
+        this.data.setAccountId(accountId);
     }
 }
