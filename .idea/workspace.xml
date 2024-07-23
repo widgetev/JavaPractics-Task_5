@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="341b3d81-f1ba-4f93-a644-5fdd6899008a" name="Changes" comment="все запихнуто в докер">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Task5SiApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/AccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/AdditionalPropertiesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/InstanceArrangementDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/InstanceBodyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/RequiredFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/ResponseAccountMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/ResponseInstanceMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/request/RequestAccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/request/RequestAdditionalPropertiesDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/request/RequestAdditionalPropertiesDataDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/request/RequestInstanceArrangementDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/DTO/request/RequestInstanceBodyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/controllers/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/controllers/InstanceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/AccountPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/Agreement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/TppProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/TppProductRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/TppRefAccountType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/TppRefProductClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/dbentity/TppRefProductRegisterType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/mapper/AccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/mapper/AdditionalPropertiesListMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/mapper/InstanceArrangementListMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/mapper/InstanceRequestBodyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/mapper/RequestBodyMapperInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/AccountPoolRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/AccountRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/AgreementRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/InstanceRepositoryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/TppProductRegisterRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/TppProductRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/TppRefAccountTypeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/TppRefProductClassRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/repository/TppRefProductRegisterTypeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/AccountServiceable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/InstanceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/InstanceServiceable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/RequiredFieldsProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/ConfigArrangementNumberDublicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/InspectorArrangementNumbersDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/InspectorContractNumberDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/InspectorProductExists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/InspectorTppRefProductRegisterTypeDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/InspectorTppRegisterTypesDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/SelectorAccByType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/WriterAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/WriterArrangement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/WriterProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/settlement/service/handler/WriterProductRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="native" />
+        <option value="nativeTest" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2je3mOImLQCMtiGDggG1irCJ9NB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/MyDocuments/IdeaProjects/JavaPractic/Task_5",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyDocuments\IdeaProjects\JavaPractic\Task_5" />
+      <recent name="C:\MyDocuments\IdeaProjects\JavaPractic\Task_5\src\main" />
+      <recent name="C:\MyDocuments\IdeaProjects\JavaPractic\Task_5\src\main\java\org\example" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn spring-boot:run" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Task5SiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Task_5" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Task5SiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="341b3d81-f1ba-4f93-a644-5fdd6899008a" name="Changes" comment="" />
+      <created>1721733876107</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721733876107</updated>
+      <workItem from="1721733877975" duration="5154000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="все запихнуто в докер" />
+    <option name="LAST_COMMIT_MESSAGE" value="все запихнуто в докер" />
+  </component>
+</project>
