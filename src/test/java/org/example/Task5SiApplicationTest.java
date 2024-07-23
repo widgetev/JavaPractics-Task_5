@@ -217,7 +217,7 @@ public class Task5SiApplicationTest {
                 "\t\t\"maximalnterestRate\":\"\",\n" +
                 "\t\t\"maximalnterestRateCoefficient\":\"\",\n" +
                 "\t\t\"maximalnterestRateCoefficientAction\":\"\"\n" +
-                "\t\t}\t\n" +
+                "\t\t}" +
                 "\t]\n" +
                 "}";
         given()

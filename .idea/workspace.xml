@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341b3d81-f1ba-4f93-a644-5fdd6899008a" name="Changes" comment="Добавил минимальное кол-во тестов,">
+    <list default="true" id="341b3d81-f1ba-4f93-a644-5fdd6899008a" name="Changes" comment="Скрины для отчета">
+      <change afterPath="$PROJECT_DIR$/files/account.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/instance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Task5SiApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Task5SiApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +42,16 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2je3mOImLQCMtiGDggG1irCJ9NB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -143,7 +150,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721733876107</updated>
-      <workItem from="1721733877975" duration="23357000" />
+      <workItem from="1721733877975" duration="26146000" />
     </task>
     <task id="LOCAL-00001" summary="все запихнуто в докер&#10;&#10;http://localhost:8181/corporate-settlement-account/create">
       <created>1721740070849</created>
@@ -159,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721758137705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Скрины для отчета">
+      <created>1721759186655</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721759186655</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,9 +193,11 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="все запихнуто в докер" />
     <MESSAGE value="все запихнуто в докер&#10;&#10;http://localhost:8181/corporate-settlement-account/create" />
     <MESSAGE value="Добавил минимальное кол-во тестов," />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил минимальное кол-во тестов," />
+    <MESSAGE value="Скрины для отчета" />
+    <option name="LAST_COMMIT_MESSAGE" value="Скрины для отчета" />
   </component>
 </project>

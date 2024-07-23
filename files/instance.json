@@ -1,0 +1,62 @@
+{
+  "instanceId":"",
+  "productType":"СМО",
+  "productCode":"03.012.002",
+  "registerType":"03.012.002_47533_ComSoLd",
+  "mdmCode":"15",
+  "contractNumber":"64314/ee",
+  "contractDate":"2023-05-17",
+  "priority":"6",
+  "interestRatePenalty":"1000",
+  "minimalBalance":"80",
+  "thresholdAmount ":"50",
+  "accountingDetails":"645348165345",
+  "rateType":"1",
+  "taxPercentageRate ":"5",
+  "technicalOverdraftLimitAmount":"800000",
+  "contractId":"0",
+  "branchCode":"98743",
+  "isoCurrencyCode":"810",
+  "urgencyCode":"00",
+  "referenceCode":"77777",
+  "additionalPropertiesVip":{
+    "data":[
+      {
+        "key": " RailwayRegionOwn",
+        "value": "ABC",
+        "name": "Регион принадлежности железной дороги"
+      },
+      {
+        "key": "counter",
+        "value": "123",
+        "name": "Счетчик"
+      }
+
+    ]
+  },
+  "instanceArrangement":[
+    {
+      "generalAgreementId":"44",
+      "supplementaryAgreementId":"333",
+      "arrangementType":"ЕЖО",
+      "shedulerJobId":"44",
+      "number":"55",
+      "openingDate":"2023-08-15",
+      "closingDate":"",
+      "CancelDate":"",
+      "validityDuration":"45",
+      "cancellationReason":"",
+      "Status":"OPEN",
+      "interestCalculationDate":"",
+      "interestRate":"34",
+      "coefficient":"8",
+      "coefficientAction":"+",
+      "minimumInterestRate":"",
+      "minimumInterestRateCoefficient":"",
+      "minimumInterestRateCoefficientAction":"",
+      "maximalnterestRate":"",
+      "maximalnterestRateCoefficient":"",
+      "maximalnterestRateCoefficientAction":""
+    }
+  ]
+}
