@@ -35,7 +35,7 @@ services:
       - "8181:8181"
     depends_on:
       - db
-#      - adminer
+      - adminer
     environment:
       - SERVER_PORT = 8181
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db/postgres
