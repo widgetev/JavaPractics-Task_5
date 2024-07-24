@@ -2,10 +2,13 @@ package org.example;
 
 
 import io.restassured.http.ContentType;
+import org.apache.tomcat.util.json.JSONParser;
+import org.apache.tomcat.util.json.ParseException;
 import org.example.settlement.DTO.request.RequestAccountDTO;
 import org.example.settlement.dbentity.TppRefAccountType;
 import org.example.settlement.repository.TppProductRegisterRepo;
 import org.example.settlement.repository.TppRefAccountTypeRepo;
+import org.json.JSONArray;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -21,8 +24,13 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.utility.MountableFile;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.given;
@@ -155,71 +163,10 @@ public class Task5SiApplicationTest {
                 .body(containsString("Параметр registryTypeCode тип регистра 02.001.005_45343_CoDowFF уже существует для ЭП с ИД  2."));
     }
 
-    @Test
-    void createInstance(){
-
-        String json = "{\n" +
-                "\"instanceId\":\"\",\n" +
-                "\"productType\":\"СМО\",\n" +
-                "\"productCode\":\"03.012.002\",\n" +
-                "\"registerType\":\"03.012.002_47533_ComSoLd\",\n" +
-                "\"mdmCode\":\"15\",\n" +
-                "\"contractNumber\":\"64314/ee\",\n" +
-                "\"contractDate\":\"2023-05-17\",\n" +
-                "\"priority\":\"6\",\n" +
-                "\"interestRatePenalty\":\"1000\",\n" +
-                "\"minimalBalance\":\"80\",\n" +
-                "\"thresholdAmount \":\"50\",\n" +
-                "\"accountingDetails\":\"645348165345\",\n" +
-                "\"rateType\":\"1\",\n" +
-                "\"taxPercentageRate \":\"5\",\n" +
-                "\"technicalOverdraftLimitAmount\":\"800000\",\n" +
-                "\"contractId\":\"0\",\n" +
-                "\"branchCode\":\"98743\",\n" +
-                "\"isoCurrencyCode\":\"810\",\n" +
-                "\"urgencyCode\":\"00\",\n" +
-                "\"referenceCode\":\"77777\",\n" +
-                "\"additionalPropertiesVip\":{\n" +
-                "\t\"data\":[\n" +
-                "\t\t{ \n" +
-                "\t\"key\": \" RailwayRegionOwn\", \n" +
-                "\t\"value\": \"ABC\", \n" +
-                "\t\"name\": \"Регион принадлежности железной дороги\" \n" +
-                "            }, \n" +
-                "\t{ \n" +
-                "\t\"key\": \"counter\",\n" +
-                "             \"value\": \"123\", \n" +
-                "\t\"name\": \"Счетчик\" \n" +
-                "            }         \n" +
-                "\n" +
-                "\t]\n" +
-                "},\n" +
-                "\"instanceArrangement\":[\n" +
-                "\t\t{\n" +
-                "\t\t\"generalAgreementId\":\"44\",\n" +
-                "\t\t\"supplementaryAgreementId\":\"333\",\n" +
-                "\t\t\"arrangementType\":\"ЕЖО\",\n" +
-                "\t\t\"shedulerJobId\":\"44\",\n" +
-                "\t\t\"number\":\"55\",\n" +
-                "\t\t\"openingDate\":\"2023-08-15\",\n" +
-                "\t\t\"closingDate\":\"\",\n" +
-                "\t\t\"CancelDate\":\"\",\n" +
-                "\t\t\"validityDuration\":\"45\",\n" +
-                "\t\t\"cancellationReason\":\"\",\n" +
-                "\t\t\"Status\":\"OPEN\",\n" +
-                "\t\t\"interestCalculationDate\":\"\",\n" +
-                "\t\t\"interestRate\":\"34\",\n" +
-                "\t\t\"coefficient\":\"8\",\n" +
-                "\t\t\"coefficientAction\":\"+\",\n" +
-                "\t\t\"minimumInterestRate\":\"\",\n" +
-                "\t\t\"minimumInterestRateCoefficient\":\"\",\n" +
-                "\t\t\"minimumInterestRateCoefficientAction\":\"\",\n" +
-                "\t\t\"maximalnterestRate\":\"\",\n" +
-                "\t\t\"maximalnterestRateCoefficient\":\"\",\n" +
-                "\t\t\"maximalnterestRateCoefficientAction\":\"\"\n" +
-                "\t\t}" +
-                "\t]\n" +
-                "}";
+    @ParameterizedTest
+    @DisplayName("Создание нового экземпляра продукта. Удачно")
+    @MethodSource("org.example.RequestInstanceDataSource#newInstOK")
+    void createInstanceOK(Object json) throws FileNotFoundException, ParseException {
         given()
                 .contentType(ContentType.JSON)
                 //.log().all()
@@ -234,30 +181,60 @@ public class Task5SiApplicationTest {
                 .body("data.supplementaryAgreementId",hasItems("03.012.002_47533_ComSoLd"));
 
     }
-
+    @ParameterizedTest
+    @DisplayName("Создание нового экземпляра продукта. Не указано обязательное поле")
+    @MethodSource("org.example.RequestInstanceDataSource#newInstNoRequiredField")
+    void createInstanceNoRequiredField(Object json) throws FileNotFoundException, ParseException {
+        given()
+                .contentType(ContentType.JSON)
+                //.log().all()
+                .when()
+                .body(json)
+                .post(requestInsUrl)
+                .then()
+                .log().body()
+                .statusCode(400)
+                .body(containsString("Обязательный параметр <productType> не заполнен."));
+    }
 }
 class RequestAccountDTODataSource {
-        static private RequestAccountDTO accountDTO = new RequestAccountDTO(
-                2,
-                "02.001.005_45343_CoDowFF",
-                "Клиентский",
-                "500",
-                "0021",
-                "00",
-                "13",
-                "РЖД",
-                "РЖД",
-                "28",
-                "4444444"
-        );
-        public static List<RequestAccountDTO> newAccOK() {
-            return List.of(accountDTO);
+    static private RequestAccountDTO accountDTO = new RequestAccountDTO(
+            2,
+            "02.001.005_45343_CoDowFF",
+            "Клиентский",
+            "500",
+            "0021",
+            "00",
+            "13",
+            "РЖД",
+            "РЖД",
+            "28",
+            "4444444"
+    );
+
+    public static List<RequestAccountDTO> newAccOK() {
+        return List.of(accountDTO);
+    }
+
+    public static List<RequestAccountDTO> newAccErr() throws NoSuchFieldException, IllegalAccessException {
+        Field field = accountDTO.getClass().getDeclaredField("currencyCode");
+        field.setAccessible(true);
+        field.set(accountDTO, "501");
+        return List.of(accountDTO);
+    }
+}
+class RequestInstanceDataSource {
+        public static List<Object> newInstOK() throws FileNotFoundException, ParseException {
+            JSONParser parser = new JSONParser(new FileReader("files/instance.json"));
+            var json = parser.parse();
+            return List.of(json);
         }
-            public static List<RequestAccountDTO> newAccErr() throws NoSuchFieldException, IllegalAccessException {
-                Field field= accountDTO.getClass().getDeclaredField("currencyCode");
-                field.setAccessible(true);
-                field.set(accountDTO,"501");
-                return List.of(accountDTO);
-        }
+
+    public static List<Object> newInstNoRequiredField() throws FileNotFoundException, ParseException {
+        JSONParser parser = new JSONParser(new FileReader("files/instance.json"));
+        Map json = (LinkedHashMap) parser.parse();
+        json.remove("productType");
+        return List.of(json);
+    }
 }
 
